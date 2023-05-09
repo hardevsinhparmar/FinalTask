@@ -14,6 +14,7 @@ import { GetCalls, PostCalls } from '../ApiCalls/Api';
 import { colors } from '../components/Colors';
 import { UseDB, deleteObj, openDB, readDB, writeDB } from '../Utils/DBUtils';
 import { ADD_USER, BASE_URL, DELETE_USER, UPDATE_USER,GET_ALL_USERS } from '../ApiCalls/Constants';
+import SplashScreen from 'react-native-splash-screen';
 const localdtaschema = {
   name: 'local_db',
   properties: {

@@ -10,6 +10,8 @@ import { Strings } from '../Utils/Strings'
 import { CommonStyles } from '../Utils/CommonStyles';
 import { CheckNull, validateReg } from '../Utils/InputValidation';
 import { colors } from '../components/Colors';
+import Spinner from 'react-native-loading-spinner-overlay';
+
 import { UseDB, readDBPrimaryKey } from '../Utils/DBUtils';
 
 
@@ -99,8 +101,11 @@ const Login = ({ navigation }) => {
 
     if (isloading) {
         return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <ActivityIndicator size="large" color={colors.black} />
+            <View style={{ flex: 1, backgroundColor: colors.SCRLVIEW, justifyContent: 'center', alignItems: 'center' }}>
+                <Spinner
+                    visible={isloading}
+                    cancelable={false}
+                />
             </View>
         )
     }

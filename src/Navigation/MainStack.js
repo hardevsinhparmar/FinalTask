@@ -11,6 +11,7 @@ const MainStack = () => {
   const [isLoggedinn, setisLogged] = useState('')
   //For checking user is logged in or not 
   useEffect(() => {
+    
     const retdata = async () => {
       try {
         const data = await AsyncStorage.getItem('isLoggedin')
