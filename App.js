@@ -4,9 +4,11 @@ import MainStack from './src/Navigation/MainStack'
 import messaging from '@react-native-firebase/messaging'
 import { useEffect } from 'react';
 import {PermissionsAndroid} from 'react-native';
+
   PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS)
 const App = () => {
   useEffect(()=>{
+    
     getDeviceToken()
     messaging().setBackgroundMessageHandler(async (remoteMessage) => {
       console.log('Message handled in the background!', remoteMessage);
