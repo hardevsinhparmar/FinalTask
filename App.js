@@ -9,7 +9,7 @@ const App = () => {
   useEffect(()=>{
     getDeviceToken()
     messaging().setBackgroundMessageHandler(async (remoteMessage) => {
-      console.log('Message got in the background!', remoteMessage);
+      console.log('Message handled in the background!', remoteMessage);
     });
   },[])
   const getDeviceToken=async()=>{
